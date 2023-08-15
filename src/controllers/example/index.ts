@@ -1,2 +1,1 @@
-
 export * from './example.controller';
