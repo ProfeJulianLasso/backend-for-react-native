@@ -6,11 +6,14 @@ import {
   ParseIntPipe,
   Post,
   Query,
+  UseGuards,
 } from '@nestjs/common';
 import { DataDto } from '../../dto/data.dto';
+import { Example1Guard } from '../../guards/example1/example1.guard';
 
 @Controller('example')
 export class ExampleController {
+  @UseGuards(Example1Guard)
   @Get('one-1/:id/:name')
   example1(
     @Param('id', ParseIntPipe) id: number,
