@@ -23,7 +23,8 @@
       "@infra": ["./src/infrastructure"],
       "@common": ["./src/infrastructure/common"],
       "@persistence": ["./src/infrastructure/persistence"],
-      "@services": ["./src/infrastructure/services"]
+      "@services": ["./src/infrastructure/services"],
+      "@presentation": ["./src/infrastructure/presentation"]
     }
   }
 }

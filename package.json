@@ -78,7 +78,8 @@
       "@infra": "<rootDir>/infrastructure",
       "@common": "<rootDir>/infrastructure/common",
       "@persistence": "<rootDir>/infrastructure/persistence",
-      "@services": "<rootDir>/infrastructure/services"
+      "@services": "<rootDir>/infrastructure/services",
+      "@presentation": "<rootDir>/infrastructure/presentation"
     }
   }
 }
