@@ -1,8 +1,8 @@
+import { Example1Filter, Example1Middleware } from '@common';
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { APP_FILTER } from '@nestjs/core';
-import { Example1Filter, Example1Middleware } from './common';
-import { ApiModule } from './presentation';
-import { AppService } from './services';
+import { ApiModule } from '@presentation';
+import { AppService } from '@services';
 
 @Module({
   imports: [ApiModule],

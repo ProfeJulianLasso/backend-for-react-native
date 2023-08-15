@@ -1,12 +1,12 @@
+import { NewUserWithoutPasswordDto } from '@common';
 import {
   CallHandler,
   ExecutionContext,
   Injectable,
   NestInterceptor,
 } from '@nestjs/common';
+import { User } from '@persistence';
 import { Observable, map } from 'rxjs';
-import { NewUserWithoutPasswordDto } from '../../dto';
-import { User } from '../../../persistence';
 
 @Injectable()
 export class NewUserWithoutPasswordInterceptor

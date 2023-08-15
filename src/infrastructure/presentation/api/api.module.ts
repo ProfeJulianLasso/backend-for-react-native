@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { PersistenceModule } from '../../persistence';
-import { ServicesModule } from '../../services';
+import { PersistenceModule } from '@persistence';
+import { ServicesModule } from '@services';
 import { AppController } from './app';
 import { ExampleController } from './example';
 import { SecurityController } from './security';

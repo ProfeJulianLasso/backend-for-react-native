@@ -1,7 +1,7 @@
 import { ToDoApp } from '@app';
+import { NewUserDto, NewUserWithoutPasswordInterceptor } from '@common';
 import { Body, Controller, Post, UseInterceptors } from '@nestjs/common';
-import { NewUserDto, NewUserWithoutPasswordInterceptor } from '../../../common';
-import { User, UserRepository } from '../../../persistence';
+import { User, UserRepository } from '@persistence';
 
 @Controller('security')
 export class SecurityController {

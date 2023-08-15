@@ -1,4 +1,11 @@
 import {
+  DataDto,
+  Example1Guard,
+  InputExampleInterceptor,
+  MyException,
+  OutputExampleInterceptor,
+} from '@common';
+import {
   Body,
   Controller,
   Get,
@@ -9,13 +16,6 @@ import {
   UseGuards,
   UseInterceptors,
 } from '@nestjs/common';
-import {
-  DataDto,
-  Example1Guard,
-  InputExampleInterceptor,
-  MyException,
-  OutputExampleInterceptor,
-} from '../../../common';
 
 @Controller('example')
 export class ExampleController {

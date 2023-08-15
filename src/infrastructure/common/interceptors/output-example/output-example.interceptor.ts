@@ -1,3 +1,4 @@
+import { DataDto, OutputDataDto } from '@common';
 import {
   CallHandler,
   ExecutionContext,
@@ -5,7 +6,6 @@ import {
   NestInterceptor,
 } from '@nestjs/common';
 import { Observable, map } from 'rxjs';
-import { DataDto, OutputDataDto } from '../../dto';
 
 @Injectable()
 export class OutputExampleInterceptor
