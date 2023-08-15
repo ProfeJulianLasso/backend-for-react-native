@@ -14,7 +14,7 @@ import { AppService } from './services';
     },
   ],
 })
-export class AppModule implements NestModule {
+export class InfrastructureModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     consumer.apply(Example1Middleware).forRoutes('*');
   }
