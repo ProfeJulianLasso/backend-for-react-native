@@ -11,13 +11,13 @@ export class User implements TUser {
   password: string;
   email: string;
 
-  constructor(user: Partial<TUser>) {
-    this.id = user.id ?? '';
-    this.name = user.name ?? '';
-    this.status = user.status ?? EStatus.ACTIVE;
-    this.username = user.username ?? '';
-    this.password = user.password ?? '';
-    this.email = user.email ?? '';
+  constructor(user?: Partial<TUser>) {
+    if (user?.id) this.id = user.id;
+    if (user?.name) this.name = user.name;
+    if (user?.status) this.status = user.status;
+    if (user?.username) this.username = user.username;
+    if (user?.password) this.password = user.password;
+    if (user?.email) this.email = user.email;
   }
 
   create(): this {
