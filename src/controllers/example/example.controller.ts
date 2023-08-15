@@ -9,6 +9,7 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { DataDto } from '../../dto/data.dto';
+import { MyException } from '../../exception-filters/example1/my-exception.filter';
 import { Example1Guard } from '../../guards/example1/example1.guard';
 
 @Controller('example')
@@ -28,7 +29,7 @@ export class ExampleController {
     @Query('name') name: string,
   ): string {
     console.log(id + 1, typeof name);
-    return `example1 ${id} - ${name}`;
+    throw new MyException('Esto es una excepción personalizada');
   }
 
   @Post('two')
