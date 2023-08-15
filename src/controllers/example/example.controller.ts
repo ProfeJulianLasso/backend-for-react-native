@@ -12,7 +12,10 @@ import {
 import { DataDto } from '../../dto';
 import { MyException } from '../../exception-filters';
 import { Example1Guard } from '../../guards/example1';
-import { InputExampleInterceptor } from '../../interceptors';
+import {
+  InputExampleInterceptor,
+  OutputExampleInterceptor,
+} from '../../interceptors';
 
 @Controller('example')
 export class ExampleController {
@@ -39,5 +42,14 @@ export class ExampleController {
   example2(@Body() data: DataDto): string {
     console.log(data instanceof DataDto);
     return `example2 ${data.id} - ${data.name}`;
+  }
+
+  @UseInterceptors(OutputExampleInterceptor)
+  @Get('three')
+  example3(): DataDto {
+    return {
+      id: 1,
+      name: 'example-3',
+    };
   }
 }
