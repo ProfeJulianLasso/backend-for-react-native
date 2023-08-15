@@ -1,8 +1,5 @@
-import { EStatus } from '../enums';
-
-export abstract class NewUserCommand {
+export interface NewUserCommand {
   name: string;
-  status: EStatus;
   username: string;
   password: string;
   email: string;
