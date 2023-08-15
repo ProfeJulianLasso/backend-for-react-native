@@ -7,10 +7,12 @@ import {
   Post,
   Query,
   UseGuards,
+  UseInterceptors,
 } from '@nestjs/common';
 import { DataDto } from '../../dto';
 import { MyException } from '../../exception-filters';
 import { Example1Guard } from '../../guards/example1';
+import { InputExampleInterceptor } from '../../interceptors';
 
 @Controller('example')
 export class ExampleController {
@@ -32,6 +34,7 @@ export class ExampleController {
     throw new MyException('Esto es una excepción personalizada');
   }
 
+  @UseInterceptors(InputExampleInterceptor)
   @Post('two')
   example2(@Body() data: DataDto): string {
     console.log(data instanceof DataDto);
