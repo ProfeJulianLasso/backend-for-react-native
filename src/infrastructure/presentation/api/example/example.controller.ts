@@ -9,13 +9,13 @@ import {
   UseGuards,
   UseInterceptors,
 } from '@nestjs/common';
-import { DataDto } from '../../dto';
-import { MyException } from '../../exception-filters';
-import { Example1Guard } from '../../guards/example1';
 import {
+  DataDto,
+  Example1Guard,
   InputExampleInterceptor,
+  MyException,
   OutputExampleInterceptor,
-} from '../../interceptors';
+} from '../../../common';
 
 @Controller('example')
 export class ExampleController {

@@ -1,18 +1,11 @@
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { APP_FILTER } from '@nestjs/core';
-import {
-  AppController,
-  ExampleController,
-  SecurityController,
-} from './controllers';
-import { Example1Filter } from './exception-filters';
-import { Example1Middleware } from './middlewares';
-import { PersistenceModule } from './persistence';
+import { Example1Filter, Example1Middleware } from './common';
+import { ApiModule } from './presentation';
 import { AppService } from './services';
 
 @Module({
-  imports: [PersistenceModule],
-  controllers: [AppController, ExampleController, SecurityController],
+  imports: [ApiModule],
   providers: [
     AppService,
     {

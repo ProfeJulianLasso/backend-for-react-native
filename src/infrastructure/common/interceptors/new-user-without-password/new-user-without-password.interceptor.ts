@@ -6,7 +6,7 @@ import {
 } from '@nestjs/common';
 import { Observable, map } from 'rxjs';
 import { NewUserWithoutPasswordDto } from '../../dto';
-import { User } from '../../persistence';
+import { User } from '../../../persistence';
 
 @Injectable()
 export class NewUserWithoutPasswordInterceptor
