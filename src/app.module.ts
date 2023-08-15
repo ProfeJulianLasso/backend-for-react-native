@@ -1,10 +1,9 @@
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { APP_FILTER } from '@nestjs/core';
-import { AppController } from './controllers/app/app.controller';
-import { ExampleController } from './controllers/example/example.controller';
-import { Example1Filter } from './exception-filters/example1/example1.filter';
-import { Example1Middleware } from './middlewares/example1/example1.middleware';
-import { AppService } from './services/app.service';
+import { AppController, ExampleController } from './controllers';
+import { Example1Filter } from './exception-filters';
+import { Example1Middleware } from './middlewares';
+import { AppService } from './services';
 
 @Module({
   imports: [],

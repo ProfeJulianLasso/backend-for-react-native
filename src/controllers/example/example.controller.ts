@@ -8,9 +8,9 @@ import {
   Query,
   UseGuards,
 } from '@nestjs/common';
-import { DataDto } from '../../dto/data.dto';
-import { MyException } from '../../exception-filters/example1/my-exception.filter';
-import { Example1Guard } from '../../guards/example1/example1.guard';
+import { DataDto } from '../../dto';
+import { MyException } from '../../exception-filters';
+import { Example1Guard } from '../../guards/example1';
 
 @Controller('example')
 export class ExampleController {
