@@ -20,7 +20,10 @@
     "paths": {
       "@app": ["./src/application"],
       "@domain": ["./src/domain"],
-      "@infra": ["./src/infrastructure"]
+      "@infra": ["./src/infrastructure"],
+      "@common": ["./src/infrastructure/common"],
+      "@persistence": ["./src/infrastructure/persistence"],
+      "@services": ["./src/infrastructure/services"]
     }
   }
 }

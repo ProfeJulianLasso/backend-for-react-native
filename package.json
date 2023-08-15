@@ -75,7 +75,10 @@
     "moduleNameMapper": {
       "@app": "<rootDir>/application",
       "@domain": "<rootDir>/domain",
-      "@infra": "<rootDir>/infrastructure"
+      "@infra": "<rootDir>/infrastructure",
+      "@common": "<rootDir>/infrastructure/common",
+      "@persistence": "<rootDir>/infrastructure/persistence",
+      "@services": "<rootDir>/infrastructure/services"
     }
   }
 }
