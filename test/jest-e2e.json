@@ -9,6 +9,9 @@
   "moduleNameMapper": {
     "@app": "<rootDir>/../src/application",
     "@domain": "<rootDir>/../src/domain",
-    "@infra": "<rootDir>/../src/infrastructure"
+    "@infra": "<rootDir>/../src/infrastructure",
+    "@persistence": "<rootDir>/../src/infrastructure/persistence",
+    "@services": "<rootDir>/../src/infrastructure/services",
+    "@presentation": "<rootDir>/../src/infrastructure/presentation"
   }
 }
