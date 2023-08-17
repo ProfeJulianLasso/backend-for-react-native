@@ -1,8 +1,32 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src",
+  "sourceRoot": "apps/nest-express-for-react-native/src",
   "compilerOptions": {
-    "deleteOutDir": true
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/nest-express-for-react-native/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/nest-express-for-react-native",
+  "projects": {
+    "nest-express-for-react-native": {
+      "type": "application",
+      "root": "apps/nest-express-for-react-native",
+      "entryFile": "main",
+      "sourceRoot": "apps/nest-express-for-react-native/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/nest-express-for-react-native/tsconfig.app.json"
+      }
+    },
+    "micro1": {
+      "type": "application",
+      "root": "apps/micro1",
+      "entryFile": "main",
+      "sourceRoot": "apps/micro1/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/micro1/tsconfig.app.json"
+      }
+    }
   }
 }
