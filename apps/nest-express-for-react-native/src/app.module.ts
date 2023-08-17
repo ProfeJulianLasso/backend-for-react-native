@@ -24,6 +24,24 @@ import { Micro1Service } from './services/micro1/micro1.service';
           port: 3001,
         },
       },
+      // {
+      //   name: 'MICRO1_KAFKA',
+      //   transport: Transport.KAFKA,
+      //   options: {
+      //     client: {
+      //       clientId: 'backend',
+      //       brokers: ['localhost:9092'],
+      //     },
+      //   },
+      // },
+      {
+        name: 'MICRO1_KAFKA',
+        transport: Transport.REDIS,
+        options: {
+          host: 'localhost',
+          port: 6379,
+        },
+      },
     ]),
   ],
   controllers: [

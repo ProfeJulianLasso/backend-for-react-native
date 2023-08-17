@@ -3,19 +3,27 @@ import { MicroserviceOptions, Transport } from '@nestjs/microservices';
 import { Micro1Module } from './micro1.module';
 
 async function bootstrap() {
-  // NestFactory.createMicroservice<MicroserviceOptions>(Micro1Module, {
-  //   transport: Transport.TCP,
-  //   options: {
-  //     port: 3001,
-  //   },
-  // });
-  // await app.startAllMicroservices();
-
   const app = await NestFactory.create(Micro1Module);
   app.connectMicroservice<MicroserviceOptions>({
     transport: Transport.TCP,
     options: {
       port: 3001,
+    },
+  });
+  // app.connectMicroservice<MicroserviceOptions>({
+  //   transport: Transport.KAFKA,
+  //   options: {
+  //     client: {
+  //       clientId: 'micro1',
+  //       brokers: ['localhost:9092'],
+  //     },
+  //   },
+  // });
+  app.connectMicroservice<MicroserviceOptions>({
+    transport: Transport.REDIS,
+    options: {
+      host: 'localhost',
+      port: 6379,
     },
   });
   await app.startAllMicroservices();
