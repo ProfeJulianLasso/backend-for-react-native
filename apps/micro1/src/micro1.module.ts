@@ -1,10 +1,9 @@
 import { Module } from '@nestjs/common';
-import { Micro1Controller } from './micro1.controller';
-import { Micro1Service } from './micro1.service';
+import { HelloWorldController } from './controllers/hello-world/hello-world.controller';
 
 @Module({
   imports: [],
-  controllers: [Micro1Controller],
-  providers: [Micro1Service],
+  providers: [],
+  controllers: [HelloWorldController],
 })
 export class Micro1Module {}
