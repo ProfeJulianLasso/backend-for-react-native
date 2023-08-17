@@ -1,5 +1,5 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
-import { NewUserDto } from 'src/dto';
+import { NewUserDto } from '../../dto';
 import { ToDo, User } from '../../persistence/entities';
 import { UserRepository } from '../../persistence/repositories';
 
