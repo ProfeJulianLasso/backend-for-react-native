@@ -9,6 +9,12 @@
       "name": "Run debugging",
       "request": "launch",
       "type": "node-terminal"
+    },
+    {
+      "command": "npm run start-micro1:debug",
+      "name": "Run micro1",
+      "request": "launch",
+      "type": "node-terminal"
     }
   ]
 }
