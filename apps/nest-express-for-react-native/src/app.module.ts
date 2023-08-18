@@ -8,6 +8,7 @@ import {
 } from './controllers';
 import { Micro1Controller } from './controllers/micro1/micro1.controller';
 import { Example1Filter } from './exception-filters';
+import { GraphqlModule } from './graphql';
 import { Example1Middleware } from './middlewares';
 import { PersistenceModule } from './persistence';
 import { AppService } from './services';
@@ -15,6 +16,7 @@ import { Micro1Service } from './services/micro1/micro1.service';
 
 @Module({
   imports: [
+    GraphqlModule,
     PersistenceModule,
     ClientsModule.register([
       {

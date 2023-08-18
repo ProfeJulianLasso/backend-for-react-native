@@ -1,0 +1,58 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Mutation {
+  """Saluda a una persona"""
+  HolaMundoMutation: String!
+}
+
+type Query {
+  """Saluda a una persona"""
+  HolaMundoConInput(
+    """Datos de la persona"""
+    user: UserInput!
+  ): String!
+  holaMundo: String!
+  holaMundoArray: [String!]!
+  holaMundoParams(
+    """Apellido de la persona"""
+    apellido: String!
+
+    """Edad de la persona"""
+    edad: Int
+
+    """Nombre de la persona"""
+    nombre: String!
+  ): String!
+  saludo(
+    """Datos de la persona"""
+    user: UserInput!
+  ): UserObject!
+  saludoArray(
+    """Datos de la persona"""
+    user: UserInput!
+  ): [UserObject!]!
+}
+
+input UserInput {
+  """Apellido de la persona"""
+  apellido: String!
+
+  """Edad de la persona"""
+  edad: Int
+
+  """Nombre de la persona"""
+  nombre: String!
+}
+
+type UserObject {
+  """Edad de la persona"""
+  age: Int
+
+  """Apellido de la persona"""
+  lastname: String!
+
+  """Nombre de la persona"""
+  name: String!
+}
