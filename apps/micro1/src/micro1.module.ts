@@ -5,5 +5,6 @@ import { HelloWorldController } from './controllers/hello-world/hello-world.cont
   imports: [],
   providers: [],
   controllers: [HelloWorldController],
+  exports: [],
 })
 export class Micro1Module {}

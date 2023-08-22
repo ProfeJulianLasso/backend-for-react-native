@@ -7,7 +7,7 @@ import {
   RedisContext,
   TcpContext,
 } from '@nestjs/microservices';
-import { from } from 'rxjs';
+import { Observable, from } from 'rxjs';
 
 @Controller()
 export class HelloWorldController {
@@ -17,7 +17,7 @@ export class HelloWorldController {
   }
 
   @MessagePattern({ cmd: 'sumar' })
-  sumar(data: { num1: number; num2: number }) {
+  sumar(data: { num1: number; num2: number }): Observable<any> {
     const response = data.num1 + data.num2;
     return from([response, {}]);
   }

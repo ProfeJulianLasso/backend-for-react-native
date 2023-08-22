@@ -12,9 +12,13 @@ export class UserRepository {
     private readonly toDoRepository: Repository<ToDo>,
   ) {}
 
-  findAll(): Promise<User[]> {
-    return this.userRepository.find({
+  async findAll(): Promise<User[]> {
+    const data = await this.userRepository.find({
       relations: ['toDos'],
+    });
+    return data.map((user) => {
+      user.password = '';
+      return user;
     });
   }
 
